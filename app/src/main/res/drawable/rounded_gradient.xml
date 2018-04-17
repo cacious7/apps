@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10dp"/>
+
+    <!--
+     .the 'ba' in front of 'DF4326' is used for transparency
+     .It is also a hex value
+    -->
+    <gradient
+        android:startColor="#baDF4326"
+        android:endColor="#DF4326"
+        android:angle="-90"
+        />
+</shape>
+
