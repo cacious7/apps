@@ -3,8 +3,10 @@ package com.example.jonnyb.smack.Controller
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.example.jonnyb.smack.R
+import com.example.jonnyb.smack.Services.AuthService
 import kotlinx.android.synthetic.main.activity_create_user.*
 import java.util.*
 
@@ -48,6 +50,10 @@ class CreateUserActivity : AppCompatActivity() {
     }
 
     fun createUserClicked(view: View) {
-
+        AuthService.registerUser(this, "finallast@cats.com", "246810"){complete ->
+            //this is the beauty of lambads, check AuthService.kt
+            //complete vaiable can be used here after setting it in AuthService.kt
+            Log.d("REGISTER USER", "Register user complete lambda boolean result= $complete")
+        }
     }
 }
